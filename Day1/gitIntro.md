@@ -302,7 +302,8 @@ To see all the remotes that you have access to, type `git remote -v`.
 
 [Back to the tippety-top.](#top)
 
-----------------------------------------------------------------------
+---
+
 #### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
 Fix it. The error messinge tells you which files contain the conflict.
@@ -432,8 +433,14 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 
 Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
 
-Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
+Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look _exactly_ like your local copy, _including the commit history._ This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 Note: There is a way to over-ride this error message. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look _exactly_ like your local copy, _including the commit history._ This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
+
+[Back to the tippety-top.](#top)
+
+#### <a name="learned"></a> What I have learned today.
+
+We should spell "project" as "projekt" because it sounds much cooler. Also, I learned a bit more about how to add remote access paths to other repositories, which I haven't really worked with in the past because most of my GitHub work has been only with myself. :)
 
 [Back to the tippety-top.](#top)
