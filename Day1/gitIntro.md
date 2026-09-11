@@ -441,4 +441,4 @@ Note: There is a way to over-ride this error message. DO NOT USE IT. If you were
 
 
 #### <a name="learn"></a>Learning is A GOOD THING!
-I learned that merge conflicts are fine UNLESS YOU ADD A BUNCH OF POINTLESS TYPOS.
+I learned that merge conflicts are fine. Typos are annoying if you purposely add a few of them.
