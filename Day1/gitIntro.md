@@ -26,8 +26,7 @@
 
 Git is a versioning system, like svn but better. It allows you to work offline, committing changes to a local "clone" of the repository, and then pushing them to the remote repository when you get back to wifi.
 
-GitHub is a web service that hosts remote Git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to
-make blind datasets or something.
+GitHub is a web service that hosts remote git repositories and enables collaboration via some nice tools. Repositories (or "repos" as they are known on GitHub) can be either public, enabling any of your colleagues to provide feedback or contribute to your project, or private, in case you need to make blind datasets or something.
 
 You will need an account on GitHub: follow <a href="https://github.com">this link</a> and fill in the form, including your full name so that your collaborators can find you easily.
 
@@ -257,7 +256,7 @@ Now, suppose you want to submit your version of the document to a journal. You t
   </tbody>
 </table>
 
-Hopefully this shows something of how Git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("conflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a `git checkout` can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The `git status` command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
+Hopefully this shows something of how git makes keeping track of your changes much simpler. You only ever edit one file, and you only have to do minimal manual editing to merge changes from multiple collaborators ("conflicts" between different versions of the same files do arise, but only when the same lines of the file have been edited, and so they are usually easy to fix - certainly much easier than merging two versions by hand in an editor). Branches take a bit of getting used to: a `git checkout` can make your current working directory look very different, unlike any other unix command you use! But thinking of it as being like "cd" is helpful. The `git status` command is incredibly useful: it tells you which files have been modified since the last commit, if there are any files that have not yet been added to the repository, if any files have been deleted since the last commit, all as well as which branch you are on.
 
 As you might have guessed, `git pull` is actually a shortcut to two commands one after the other: `git fetch` (to get any new commits from the remote repository) and `git merge` (to merge the files in the remote branch with the current local one). Unlike with doing things by hand, it's actually quite hard to over-write files and lose work. Git will not let you pull in other people's changes until you have committed yours, and it will not let you push your changes to a remote repository until you have first pulled its changes in and merged them. And finding old versions by your commented history is much easier than trying to remember the meaning of your own filenames!
 
@@ -303,11 +302,10 @@ To see all the remotes that you have access to, type `git remote -v`.
 
 [Back to the tippety-top.](#top)
 
----
-
+----------------------------------------------------------------------
 #### <a name="conflicts"></a>I git pulled and now I have a conflict. What do I do?
 
-Fix it. The error message tells you which files contain the conflict.
+Fix it. The error messinge tells you which files contain the conflict.
 Open them in an editor and search for the string
 '&gt;&gt;&gt;&gt;&gt;&gt;'. The portion of code
 between this string and the '======' mark is the remote version, while
@@ -432,9 +430,9 @@ Try not to feel hard done by: conflicts are relatively rare, and a natural conse
 
 ---
 
-#### <a name="force-push"></a>I don't seem to be able to push. What should I do?
+Sometimes, after trying to `git push`, you get an error messinge. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
 
-Sometimes, after trying to `git push`, you get an error message. You should read this carefully: most of the time its because the remote repo you are pushing to has changed, and you just need to pull, and fix any conflicts, before you push.
+Note: There is a way to over-ride this error messinge. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look *exactly* like your local copy, *including the commit history.* This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
 Note: There is a way to over-ride this error message. DO NOT USE IT. If you were to do a so-called "force-push," you would be forcing the remote version of the repository to look _exactly_ like your local copy, _including the commit history._ This could include deleting files that are on the remote repo, but not pulled to your local copy, that someone else is working on. Force-push should only be used if you really know what what you're doing, and are the project leader and repo admin. If you think you need to force push, open an issue and discuss it with your collaborators first.
 
